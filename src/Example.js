@@ -348,6 +348,7 @@ export default function Example() {
         color="white"
         fontSize="24px"
         text="As"
+        scrollBehavior="auto"
       />
 
       <BackToTop
