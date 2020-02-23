@@ -29,12 +29,19 @@ export default class BackToTop extends Component {
         cursor: props.cursor,
         outline: props.outline,
         zIndex: props.zIndex
-      }
+      },
+      show: false
     };
   }
 
   componentDidMount() {
     window.addEventListener("scroll", this.handleScroll);
+    const { show } = this.state;
+    if (!show) {
+      this.hideButton();
+    } else {
+      this.showButton();
+    }
   }
 
   componentWillUnmount() {
@@ -42,9 +49,11 @@ export default class BackToTop extends Component {
   }
 
   handleScroll = () => {
+    this.setState({ show: true });
     const { showOnDistance } = this.props;
-    const screenY = window.scrollY;
-    screenY >= (showOnDistance >= 0 ? showOnDistance : 300)
+    const scrollY = window.scrollY;
+
+    scrollY >= (showOnDistance >= 0 ? showOnDistance : 300)
       ? this.showButton()
       : this.hideButton();
   };
