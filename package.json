@@ -32,7 +32,7 @@
   },
   "scripts": {
     "build": "webpack",
-    "start": "react-scripts start"
+    "start": "webpack-dev-server"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -60,6 +60,7 @@
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
     "webpack": "^4.5.0",
-    "webpack-cli": "^3.2.1"
+    "webpack-cli": "^3.2.1",
+    "webpack-dev-server": "^3.10.3"
   }
 }
