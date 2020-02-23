@@ -1,68 +1,62 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# react-easy-back-to-top
 
-## Available Scripts
+## Description
 
-In the project directory, you can run:
+An easy to use back to top component with React
 
-### `yarn start`
+## Installation
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+`npm install --save react-easy-back-to-top`
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Run the example locally
 
-### `yarn test`
+1. npm install
+2. npm start
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Usage
 
-### `yarn build`
+```
+import React from "react";
+import BackToTop from 'react-easy-back-to-top';
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+export default function Example() {
+  return (
+    <BackToTop
+      backgroundColor="green"
+      position={{ right: "5%", bottom: "10%" }}
+      hover={{ backgroundColor: "black", color: "gray" }}
+      transition="all 0.5s"
+      showOnDistance={0}
+      borderRadius={16}
+      opacity="1"
+      color="white"
+      fontSize="24px"
+      // Other Props...
+    />
+  );
+}
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Props
 
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+| Props           | Types  | Defaults                                                     | Descriptions                                                                                                                                                                                                                                                                                                                                                                  |
+| --------------- | :----- | ------------------------------------------------------------ | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| icon            | string |                                                              | You can use any font awesome icon with their classnames. For example: `icon="fas fa-arrow-up"`                                                                                                                                                                                                                                                                                |
+| position        | object | `{ bottom: "0%", right: "0%"}`                               | Position of the button. You can specify top, right, bottom, left positions with 'px' or '%'                                                                                                                                                                                                                                                                                   |
+| color           | string | `white`                                                      | Color of text or icon inside of the button                                                                                                                                                                                                                                                                                                                                    |
+| backgroundColor | string | `black`                                                      | Background of the button                                                                                                                                                                                                                                                                                                                                                      |
+| hover           | object | `{color: 'white', backgroundColor: 'black', opacity: '0.9'}` | If the button hovered, these styles gonna be applied to button                                                                                                                                                                                                                                                                                                                |
+| borderRadius    | number | `48`                                                         | Border radius of the button                                                                                                                                                                                                                                                                                                                                                   |
+| margin          | string | `12px`                                                       | Margin of the button                                                                                                                                                                                                                                                                                                                                                          |
+| fontSize        | string | `18px`                                                       | Font size of the icon or text                                                                                                                                                                                                                                                                                                                                                 |
+| padding         | string | `16px`                                                       | Padding of the button                                                                                                                                                                                                                                                                                                                                                         |
+| opacity         | string | `1`                                                          | Opacity of the button                                                                                                                                                                                                                                                                                                                                                         |
+| border          | string | `none`                                                       | Border of the button                                                                                                                                                                                                                                                                                                                                                          |
+| text            | string |                                                              | The text inside of the button                                                                                                                                                                                                                                                                                                                                                 |
+| cursor          | string | `pointer`                                                    | Cursor style of the button                                                                                                                                                                                                                                                                                                                                                    |
+| outline         | string | `none`                                                       | Outline style of the button                                                                                                                                                                                                                                                                                                                                                   |
+| scrollBehavior  | string | `smooth`                                                     | Scroll behavior of the button. You can use any scroll behavior property. [More](https://developer.mozilla.org/en-US/docs/Web/CSS/scroll-behavior)                                                                                                                                                                                                                             |
+| transition      | string | `none`                                                       | Transition property of the button [More](https://developer.mozilla.org/en-US/docs/Web/CSS/transition)                                                                                                                                                                                                                                                                         |
+| showOnDistance  | number | `300`                                                        | A number equal to the number of CSS pixels from the top edge of the browser viewport to the top edge of the screen. For example when you set it to `showOnDistance={1000}`, the button will appear when the user's screenY greater than 1000 pixels. If you set it to `0`, it will be always visible. [More](https://developer.mozilla.org/en-US/docs/Web/API/Window/screenY) |
+| zIndex          | number | `999`                                                        | z-index property for the button                                                                                                                                                                                                                                                                                                                                               |

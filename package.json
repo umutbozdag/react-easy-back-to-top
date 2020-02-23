@@ -1,11 +1,23 @@
 {
-  "name": "react-back-top-component",
-  "version": "0.1.0",
-  "private": true,
+  "name": "react-easy-back-to-top",
+  "version": "1.0.0",
+  "description": "An easy to use back to top component with React",
+  "keywords": [
+    "react",
+    "scroll",
+    "back",
+    "top",
+    "component",
+    "easy"
+  ],
+  "main": "src/index.js",
+  "author": {
+    "name": "umutbozdag",
+    "email": "umutbozdag@outlook.com.tr"
+  },
+  "license": "MIT",
   "dependencies": {
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.3.2",
-    "@testing-library/user-event": "^7.1.2",
+    "prop-types": "^15.7.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-scripts": "3.4.0"
