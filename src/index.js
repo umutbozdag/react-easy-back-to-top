@@ -1,5 +1,5 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import BackToTop from "./BackToTop";
+import Example from "./Example";
 
-ReactDOM.render(<BackToTop />, document.getElementById("root"));
+ReactDOM.render(<Example />, document.getElementById("root"));
