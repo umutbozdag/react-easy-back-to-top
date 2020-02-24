@@ -13,6 +13,10 @@ An easy to use back to top component with React
 1. npm install
 2. npm start
 
+## Demo
+
+[Demo](https://codesandbox.io/s/laughing-architecture-kzqi6)
+
 ## Usage
 
 ```
